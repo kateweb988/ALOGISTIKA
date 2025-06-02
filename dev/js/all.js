@@ -359,6 +359,93 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  var swiper4 = new Swiper(".swiper4", {
+    spaceBetween: 20,
+    slidesPerView: "3",
+    allowTouchMove: window.innerWidth <= 992, // разрешить свайп только на мобилках
+    pagination: {
+      el: ".swiper-pagination4",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1,
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      1200: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      }
+    }
+  });
+  var swiper5 = new Swiper(".swiper5", {
+    spaceBetween: 24,
+    slidesPerView: "4",
+    allowTouchMove: window.innerWidth <= 992, // разрешить свайп только на мобилках
+    pagination: {
+      el: ".swiper-pagination5",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1,
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+      },
+      992: {
+        spaceBetween: 24,
+        slidesPerView: 4,
+      },
+      1200: {
+        spaceBetween: 24,
+        slidesPerView: 4,
+      }
+    }
+  });
+  var swiper6 = new Swiper(".swiper6", {
+    spaceBetween: 24,
+    slidesPerView: "2",
+    pagination: {
+      el: ".swiper-pagination6",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next6",
+      prevEl: ".swiper-button-prev6",
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 1,
+      },
+      992: {
+        spaceBetween: 0,
+        slidesPerView: 1,
+      },
+      1200: {
+        spaceBetween: 24,
+        slidesPerView: 2
+      }
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {

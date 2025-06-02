@@ -1,10 +1,10 @@
-input::-webkit-input-placeholder 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder 
    color: #9d99a6 !important
-input::-moz-placeholder
+input::-moz-placeholder, textarea::-moz-placeholder
    color: #9d99a6 !important
-input:-ms-input-placeholder 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder 
    color: #9d99a6 !important
-input:-moz-placeholder 
+input:-moz-placeholder, textarea:-moz-placeholder 
    color: #9d99a6 !important
 .menu-btn, .menu
    display: none
@@ -537,7 +537,14 @@ input:-moz-placeholder
       &:hover 
          opacity: 0.7
 .nav 
-   background: #090121
+   background: rgb(9, 1, 33)
+   &__mail 
+      color: rgb(255, 255, 255)
+      font-size: 20px
+      font-weight: 700
+      line-height: 30px
+      letter-spacing: 0.52px
+      margin-right: 50px
    &__box 
       padding: 19px 0 
       align-items: center
@@ -555,7 +562,7 @@ input:-moz-placeholder
       justify-content: center
       width: 50px
       height: 50px
-      background: #423b54
+      background: rgba(255, 255, 255, 0.1)
       color: #FFF
       font-size: 16px
       font-weight: 700
@@ -569,7 +576,7 @@ input:-moz-placeholder
       font-weight: 700
       line-height: 30px
       letter-spacing: 0.52px
-      margin-right: 40px
+      margin-right: 49px
    &__socials
       a 
          width: 39px
@@ -597,7 +604,7 @@ input:-moz-placeholder
       line-height: 30px
       letter-spacing: 0.52px
       text-transform: uppercase
-      margin-left: 40px
+      margin-left: 90px
       .svg 
          margin-left: 15px
       &:hover 
@@ -608,9 +615,62 @@ input:-moz-placeholder
    &__content 
       align-items: center
 .header
+   &__row 
+      position: relative
+      z-index: 2
+      justify-content: space-between
+      padding: 30px 110px 
+      border-radius: 82px
+      background: rgb(255, 255, 255)
+      margin-bottom: 50px
+      div 
+         align-items: center
+         position: relative
+         p 
+            margin-left: 21px
+            color: rgb(42, 44, 56)
+            font-size: 21px
+            font-weight: 600
+            line-height: 26px
+         &:after 
+            content: ""
+            display: block
+            position: absolute
+            right: -92px
+            top: -8px
+            height: 67px
+            width: 2px
+            background: rgba(58, 76, 138, 0.5)
+         &:last-child
+            &:after 
+               display: none
+   &__line 
+      justify-content: space-between
+      position: relative
+      z-index: 2
+      margin-bottom: 109px
+   &__el
+      display: flex
+      align-items: center
+      div 
+         display: flex
+         margin-right: 18px
+         width: 50px
+         height: 50px
+         align-items: center
+         justify-content: center
+         border-radius: 10px
+         background: rgb(25, 189, 229)
+      p 
+         color: rgb(255, 255, 255)
+         font-size: 20px
+         font-weight: 700
+         line-height: 24px
+      &:nth-child(3)
+         margin-left: 57px
    &__wrap 
       position: relative
-      padding-top: 78px
+      padding-top: 83px
    &__bg 
       position: absolute
       top: 0
@@ -622,25 +682,26 @@ input:-moz-placeholder
       align-items: center
       justify-content: space-between
       position: relative
-      margin-bottom: 106px
+      margin-bottom: 31px
       z-index: 1
       p 
          width: 100%
          max-width: 584px
          margin-left: 52px
          color: #FFF
-         font-size: 23px
+         font-size: 21px
          font-weight: 500
          line-height: 145%
    &__area 
       padding: 45px 0 
+      background: rgb(42,44,56)
    &__list 
       display: flex
       flex-wrap: wrap 
       li 
          margin-right: 40px
          a 
-            color: #1D1732
+            color: rgb(255, 255, 255)
             font-size: 16px
             font-style: normal
             font-weight: 500
@@ -652,6 +713,11 @@ input:-moz-placeholder
             margin-right: 0
    &__box 
       position: relative
+      height: 700px
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      padding: 40px
    &__video
       position: absolute
       right: 225px
@@ -665,11 +731,75 @@ input:-moz-placeholder
       width: 100%
       object-fit: cover
       margin-bottom: -6px
+      position: absolute
+      bottom: 6px
+      left: 0
+      height: 100%
    h1 
-      line-height: 112%
+      line-height: 87px
+      font-size: 89px
+      font-family: 'Stapel'
+   &__per 
+      position: relative
+      width: 100%
+      z-index: 2
+      margin-top: auto
+      padding: 50px
+      border-radius: 73px 73px 0px 10px
+      background: rgba(42, 44, 56, 0.92)
+      align-items: flex-start
+      .help__form
+         margin-top: 0
+         width: 100%
+         max-width: 630px
+         margin-left: 280px
+         input 
+            width: 273px
+            font-size: 16px
+            margin-right: 21px
+            border-radius: 5px
+         button 
+            width: 273px
+            height: 76px
+            font-size: 16px
+   .custom-checkbox:checked + label::before
+      background-color: $blue
+   &__fl 
+      margin-bottom: 9px
+   .custom-checkbox + label::before
+      width: 18px 
+      height: 18px
+      max-width: 18px
+      box-sizing: border-box
+      margin-right: 13px
+   .custom-checkbox + label p 
+      font-size: 14px
+      font-weight: 500
+      line-height: 150%
+      a 
+         color: $blue
+         border-bottom: 1px solid $blue
+         &:hover 
+            color: white 
+            border-bottom: 1px solid white
+   &__left
+      margin-top: 10px
+      p 
+         color: rgb(255, 255, 255)
+         font-size: 24px
+         font-weight: 700
+         line-height: 29px
+         text-transform: uppercase
+         margin-bottom: 20px
+      span 
+         color: rgb(255, 255, 255)
+         font-size: 18px
+         font-weight: 400
+         line-height: 150%
 .cat 
    width: 100%
    object-fit: contain
+   margin-bottom: -7px
 .youtube-link .svg, .youtube-link path 
    transition: 0.5s
 .grtvideo-popup
@@ -705,79 +835,239 @@ input:-moz-placeholder
    width: 100%
    height: 480px
 .info 
-   padding: 87px 0 126px
-   &__box 
-      margin-top: 37px
-      align-items: flex-start
+   padding: 180px 0 182px
+   background: #2a2c38
+   h2 
+      opacity: 0.95
+      color: rgb(255, 255, 255)
+      margin-bottom: 36px
+   &__box
+      flex-wrap: wrap
+      margin-bottom: 160px
       justify-content: space-between
+   &__item 
+      width: 49.3%
+      border-radius: 20px
+      background: rgb(9, 17, 47)
+      margin-bottom: 20px
+      padding: 40px
+      p 
+         opacity: 0.8
+         color: rgb(232, 225, 251)
+         font-size: 16px
+         font-weight: 400
+         line-height: 150%
+         width: 100%
+         max-width: 519px
+   &__top
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: 31px
+      h3 
+         margin-top: 0
+         margin-bottom: 0
+         color: rgb(255, 255, 255)
+         font-size: 26px
+         font-weight: 400
+         line-height: 130%
+         text-transform: uppercase
+         font-family: 'Stapel'
+      div 
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 50px
+         height: 50px
+         border-radius: 10px
+         background: rgb(25, 189, 229)
+         margin-top: -10px
+         margin-right: -10px
+         color: rgb(255, 255, 255)
+         font-size: 25px
+         font-weight: 800
+         line-height: 30px
+         text-transform: uppercase
+   &__row 
+      justify-content: space-between
+      flex-wrap: wrap 
+      margin-bottom: 122px
+   &__block 
+      position: relative
+      padding: 30px
+      overflow: hidden
+      height: 446px
+      border-radius: 20px
+      margin-bottom: 20px
+      width: 32.5%
+      &:after 
+         content: ""
+         display: block
+         position: absolute
+         top: 0
+         left: 0
+         z-index: 2
+         transition: 0.5s
+         background: rgba(0, 0, 0, 0.3)
+         width: 100%
+         height: 100%
+      img 
+         width: 100%
+         height: 100%
+         position: absolute
+         top: 0
+         left: 0
+         object-fit: cover 
+         z-index: 0
+      span 
+         display: flex
+         transition: 0.5s 
+         align-items: center
+         justify-content: center
+         width: max-content
+         height: 36px
+         padding: 0 25px 
+         border-radius: 15px
+         background: rgb(6, 3, 18)
+         color: rgb(255, 255, 255)
+         font-size: 22px
+         font-weight: 700
+         line-height: 130%
+         text-transform: uppercase
+         position: relative
+         z-index: 3
+      &:hover 
+         &:after 
+            opacity: 0
+         span 
+            background: $blue
+   .pg 
+      display: none
+   .swiper4
+      .swiper-slide
+         &:nth-child(3n)
+            margin-right: 0 !important
+   &__get   
+      justify-content: space-between
+      align-items: flex-start
+      ul 
+         margin-top: 54px
+         li 
+            align-items: center
+            margin-bottom: 30px
+            p 
+               color: rgb(232, 225, 251)
+               font-size: 24px
+               font-weight: 700
+               line-height: 29px
+               text-transform: uppercase
+            &:before 
+               content: ""
+               display: block
+               flex: 1 0 auto 
+               margin-right: 20px
+               width: 22px
+               height: 22px
+               max-width: 22px 
+               background: $blue
+               border-radius: 50%
+.lap
+   padding: 100px 0 
+   background: rgb(9, 17, 47)
+   &__box 
+      justify-content: space-between
+      align-items: flex-start
+      margin-top: 35px
    &__content 
       width: 100%
       max-width: 49.3%
-   &__name 
-      margin-bottom: 16px
-      color: #090121
-      font-size: 24px
-      font-style: normal
-      font-weight: 700
-      line-height: normal
-      text-transform: uppercase
-   &__text 
-      color: #090121
+      h3 
+         margin-top: 0
+         margin-bottom: 16px
+         color: rgb(232, 225, 251)
+         font-size: 24px
+         font-weight: 700
+         line-height: 29px
+         text-transform: uppercase
+      p 
+         color: rgb(232, 225, 251)
+         font-size: 18px
+         font-weight: 400
+         line-height: 150%
+         margin-bottom: 27px
+      a 
+         align-items: center
+         margin-top: 51px 
+         display: flex
+         width: max-content
+         p 
+            color: rgb(26, 189, 230)
+            font-size: 26px
+            font-weight: 800
+            line-height: 62.4px
+            letter-spacing: 1.14px
+            text-transform: uppercase
+            transition: 0.5s
+            margin-bottom: 0 !important
+         &:hover 
+            opacity: 0.7
+.text 
+   padding: 180px 0
+   background: #2a2c38
+   h2 
+      margin-bottom: 30px
+   p 
+      margin-bottom: 30px
+      color: rgb(232, 225, 251)
       font-size: 18px
-      font-style: normal
       font-weight: 400
       line-height: 150%
-      margin-bottom: 25px
-   &__btn 
-      align-items: center 
-      margin-top: -9px
-      width: max-content
-      p 
-         margin-right: -4px
-         color: #0CF
-         font-size: 26px
-         font-style: normal
-         font-weight: 800
-         line-height: 62.4px
-         letter-spacing: 1.14px
-         text-transform: uppercase
-         transition: 0.5s 
-      &:hover 
-         p 
-            color: #0BA5CB
-         .svg 
-            circle.at 
-               stroke: #0BA5CB
-            circle.at2 
-               fill: #0BA5CB
+      width: 100%
+      max-width: 83%
+   img 
+      width: 100%
 .van 
-   padding: 100px 0 
-   background: rgba(229, 237, 249, 0.80)
-   &__box 
+   background: rgb(9, 17, 47)
+   padding: 103px 0 80px
+   &__box
       justify-content: space-between
-      align-items: flex-start
    &__item 
+      position: relative
+      width: 30%
       text-align: center
-      width: 21%
-   &__name 
-      margin-top: 14px
-      color: #160E2C
-      font-size: 32px
-      font-style: normal
+      img 
+         display: block
+         margin: 0 auto 21px 
+      &:nth-child(2)
+         &:before, &:after 
+            content: ""
+            display: block
+            top: 0
+            width: 1px
+            height: 243px
+            background: rgb(255, 255, 255)
+            position: absolute
+         &:before 
+            left: -58px
+         &:after 
+            right: -58px
+   &__name
+      margin-top: 0
+      margin-bottom: 11px
+      color: rgb(255, 255, 255)
+      font-size: 34px
       font-weight: 400
       line-height: 130%
-      font-family: 'Stapel'
       text-transform: uppercase
-   &__text 
-      margin-top: 10px
-      color: #160E2C
+      font-family: 'Stapel'
+   &__text
+      opacity: 0.8
+      color: rgb(232, 225, 251)
       font-size: 16px
-      font-style: normal
       font-weight: 400
       line-height: 150%
-      opacity: 0.8
-.ser 
+.ser
    padding: 180px 0
+   background: #2a2c38
    .swiper1 
       overflow: hidden
       margin-top: 69px
@@ -799,9 +1089,13 @@ input:-moz-placeholder
       position: absolute
       z-index: 2
       transition: 0.5s
-      border: 2px solid $blue
+      border: 2px solid white
+      .svg 
+         path 
+            stroke: white
       &:hover 
          background: $blue 
+         border: 2px solid $blue
          .svg 
             path 
                stroke: white
@@ -820,13 +1114,16 @@ input:-moz-placeholder
       align-items: center
       height: 56px
       border-radius: 39px
-      border: 2px solid #1D1732
+      border: 2px solid white
       padding: 0 10px 0 25px 
       margin-left: auto
       position: relative
       margin-top: 36px
+      .svg 
+         path 
+            fill: rgb(6, 3, 18)
       p 
-         color: #1D1732
+         color: rgb(213, 208, 229)
          font-size: 16px
          font-weight: 700
          letter-spacing: 0.52px
@@ -835,9 +1132,13 @@ input:-moz-placeholder
          position: relative
          top: 1.5px
       &:hover 
-         background: #1D1732
+         border: 2px solid $blue
+         background: $blue
          p 
             color: white
+         .svg 
+            path 
+               fill: white
       &:before 
          content: ""
          display: block
@@ -846,7 +1147,7 @@ input:-moz-placeholder
          left: -5%
          width: 105%
          height: 48px
-         background: #FFF
+         background: #2a2c38
    &__block 
       align-items: center
       justify-content: center
@@ -855,7 +1156,7 @@ input:-moz-placeholder
       height: 39px
       border-radius: 38px
    &__name 
-      color: #090121
+      color: white
       font-size: 39px
       font-style: normal
       font-weight: 500
@@ -873,7 +1174,7 @@ input:-moz-placeholder
          left: -30px
    &__text 
       margin-top: 30px
-      color: #090121
+      color: rgb(232, 225, 251)
       font-size: 16px
       font-style: normal
       font-weight: 400
@@ -903,7 +1204,7 @@ input:-moz-placeholder
       right: 0
       top: 0
       padding: 27px 
-      color: #090121
+      color: rgb(232, 225, 251)
       font-size: 16px
       font-weight: 400
       line-height: 150%
@@ -920,7 +1221,7 @@ input:-moz-placeholder
          opacity: 1
          height: 2px
          border-radius: 40px
-         background: rgba(0, 0, 0, 0.35)
+         background: rgba(255, 255, 255, 0.35)
          &:last-child
             margin-right: 0
       .swiper-pagination-bullet-active
@@ -932,7 +1233,7 @@ input:-moz-placeholder
    opacity: 0
 .way 
    padding: 86px 0
-   background: rgba(229, 237, 249, 0.80)
+   background: rgb(9, 17, 47)
    &__top 
       justify-content: space-between
       align-items: center
@@ -946,31 +1247,24 @@ input:-moz-placeholder
       letter-spacing: 0.52px
       text-transform: uppercase
       border-radius: 39px
+      background: rgb(25, 189, 229)
+      padding-top: 3px
       .svg 
          margin-left: 14px
       &:hover 
+         background: white
          .svg 
             path 
                fill: $blue
    &__box 
       justify-content: space-between
       align-items: flex-start
-   &__item 
-      width: 24%
-      position: relative
-      border-radius: 20px
-      overflow: hidden
-      height: 600px
-      transition: 0.5s
-      &:hover
-         height: 600px
-         .way__pic 
-            height: 600px
-         &:after 
-            height: 600px
-            opacity: 0
-         .way__block 
-            background: #00CCFF
+   .info__row 
+      margin-bottom: 0 !important
+   .info__block
+      span 
+         width: 200px
+         padding: 0
       &:after 
          content: ""
          border-radius: 20px
@@ -984,33 +1278,48 @@ input:-moz-placeholder
          opacity: 1
          z-index: 1
          background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%)
-   &__pic 
+      &:hover 
+         &:after 
+            opacity: 0
+   .swiper5
+      .swiper-slide
+         &:nth-child(4n)
+            margin-right: 0 !important
+   .pg 
+      display: none
+.rep 
+   padding: 180px 0 88px
+   background: #2a2c38
+   &__box 
+      position: relative
+   h2 
+      margin-bottom: 30px
+      opacity: 0.95
+   p 
       width: 100%
-      height: 446px
-      object-fit: cover 
-      position: absolute
-      top: 0
-      left: 0
-      border-radius: 20px
-      transition: 0.5s
-   &__block 
-      align-items: center
-      justify-content: center
-      width: 165px
-      border-radius: 15px
-      background: #090121
-      height: 36px
-      position: absolute
-      top: 30px
-      left: 30px
-      z-index: 2
-      color: #FFF
-      font-size: 22px
-      font-style: normal
-      font-weight: 700
-      padding-top: 2px
-      text-transform: uppercase
-      transition: 0.5s
+      max-width: 80% 
+      color: rgb(232, 225, 251)
+      font-size: 18px
+      font-weight: 400
+      line-height: 150%
+      margin-bottom: 30px
+   .swiper6 
+      overflow: hidden
+      .swiper-slide 
+         border-radius: 50px
+         height: 568px
+         overflow: hidden
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+   .swiper-button-next6
+      left: inherit
+      right: -100px
+   .ser-arr
+      top: 62%
+   .pg 
+      display: none
 .news 
    padding: 150px 0 80px
    &__top 
@@ -1097,6 +1406,7 @@ input:-moz-placeholder
       letter-spacing: 0.7px
 .par 
    padding: 80px 0 150px
+   background: #2a2c38
    &__box 
       margin-top: 60px
       justify-content: space-between
@@ -1106,17 +1416,24 @@ input:-moz-placeholder
       justify-content: center
       width: 24%
       height: 154px
-      border-radius: 20px 
       margin-bottom: 20px
       transition: 0.5s
-      background: #EAF1FA
-      border: 2px solid transparent 
+      border-radius: 20px
+      background: rgb(24, 26, 39)
+      border: 5px solid rgb(24, 26, 39)
+      img 
+         filter: grayscale(1)
+         transition: 0.5s
       &:hover 
-         border: 2px solid #000
-         background: transparent
+         border: 5px solid rgb(25, 189, 229)
+         background: rgb(255, 255, 255)
+         img 
+            filter: inherit
 .help 
-   background: rgba(229, 237, 249, 0.80)
+   background: rgb(9, 17, 47)
    padding: 100px 0
+   h2 
+      opacity: 0.95
    &__sub 
       margin-top: 21px
       color: #090121
@@ -1132,13 +1449,26 @@ input:-moz-placeholder
          margin-bottom: 10px
          height: 76px
          border-radius: 10px
-         background: #FFF
+         background: rgb(39, 62, 95)
          padding-left: 23px
-         color: #090121
+         color: white
          font-size: 20px
          font-weight: 500
          line-height: 130%
          border: 2px solid transparent
+      textarea 
+         max-width: 100% 
+         width: 100%
+         height: 160px
+         border-radius: 10px
+         background: rgb(39, 62, 95)
+         padding-left: 23px
+         color: white
+         font-size: 20px
+         font-weight: 500
+         line-height: 130%
+         border: 2px solid transparent
+         padding-top: 20px
    &__content 
       width: 100%
       max-width: 660px
@@ -1148,7 +1478,7 @@ input:-moz-placeholder
    .form-check-label
       margin: 14px 0 20px
       p 
-         color: #090121
+         color: white
          font-size: 14px
          font-style: normal
          font-weight: 400
@@ -1157,8 +1487,8 @@ input:-moz-placeholder
             color: $blue
             border-bottom: 1px solid $blue
             &:hover 
-               color: #000
-               border-bottom: 1px solid #000
+               color: white
+               border-bottom: 1px solid white
    .custom-checkbox + label::before
       margin-right: 10px
       width: 18px
@@ -1171,14 +1501,25 @@ input:-moz-placeholder
       background-color: $blue
    &__btn 
       transition: 0.5s
+      &:hover 
+         background: white 
+         color: $blue
+   &__pic 
+      margin-top: 30px
 .footer 
-   background: #121212
+   background: rgb(42, 44, 56)
    padding: 47px 0 33px 
    position: relative
    z-index: 8
+   .nav__mail
+      font-size: 16px
+      font-weight: 600
+      margin-right: 36px
+   &__right 
+      align-items: center
    .nav__socials 
       position: relative
-      left: -131px
+      left: 0px !important
    &__top 
       align-items: flex-end
       justify-content: space-between
